@@ -1,0 +1,34 @@
+@use 'variables' as *;
+
+@mixin container(){
+    @include padding-horizontal(to-vw(64));
+    @media screen and (max-width: 600px) {
+        @include padding-vertical(to-vw-mobile(20))
+    }
+}
+
+@mixin padding-horizontal($value){
+    padding-left: $value;
+    padding-right: $value;
+}
+@mixin set-font($weight, $size, $min, $max){
+    font-size: clamp($min, to-vw($size), $max);
+    font-weight: $weight;
+
+}
+@mixin padding-vertical($value){
+    padding-top: $value;
+    padding-bottom: $value;
+}
+
+@mixin black-button($radius: 30){
+    color: white;
+    background-color: $most-dark;
+    border-radius: clamp(30px, to-vw($radius), 50px);
+    @include padding-horizontal(32px)
+}
+
+@mixin flex-center{
+    display: flex;
+    align-items: center;
+}

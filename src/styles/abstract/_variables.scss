@@ -1,0 +1,23 @@
+$most-dark: #000000;
+$dark-blue: #222FDC;
+$dark-grey: #5B605C;
+$dark-medium-grey: #C3C3C3;
+$light-blue: #F4FAFF;
+$medium-grey: #B0B1C1;
+$light-grey: #F7F7F7; 
+$light-green: #5AD18D;
+$dark-green: #3C711E;
+
+$desktop-width: 1440;
+$mobile-width: 375;
+
+$main-font-family: 'inter';
+$header-font-family: '';
+
+@function to-vw($pixels){
+    @return($pixels / $desktop-width) * 100vw
+};
+
+@function to-vw-mobile($pixels){
+    @return($pixels / $mobile-width) * 100vw
+}

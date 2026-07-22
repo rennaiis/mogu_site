@@ -1,0 +1,53 @@
+@use './abstract' as *;
+
+.header{
+    @include container;
+    @include padding-vertical(to-vw(8));
+    div{
+        button{
+            @include black-button;
+            @include set-font(500, 22, 20px, 24px);
+            max-height: 64px;
+            
+        }
+    };
+    &__logo{
+        @include flex-center;
+        gap: to-vw(20);
+        nav{
+            display: flex;
+            align-items:center;
+            gap: to-vw(32);
+            a{
+                color: $dark-grey;
+
+            }
+        }
+
+    };
+    &__logo-text{
+        min-height: 30%;
+    };  
+    &__image{
+        @include flex-center;
+        justify-items: center;
+        max-width: to-vw(64);
+        min-width: 64px;
+        overflow: hidden;
+        aspect-ratio: 1 / 1;
+        background-color: $light-blue;
+        border-radius: 50%;
+        img{
+           object-fit: cover; 
+           width: 80%;
+           height: 80%;
+           transform: translateY(25%);
+        }
+    }
+    div{
+        width: 100%;
+        display: flex;
+        justify-items: space-between;
+        
+    }
+}
