@@ -1,10 +1,11 @@
-import logo from '../../public/logo.svg'
+import { content } from "../constants/copyright"
+
 function Header (){
     return (
         <header className="header">
             <div>
                 <div className="header__logo">
-                    <img src={logo} alt="" />
+                    <img src={content.header.logo.img} alt=""/>
                     <nav>
                         <a href="">О нас</a>
                         <a href="">Кейсы</a>

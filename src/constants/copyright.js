@@ -1,9 +1,5 @@
-const { type } = require("os");
-const { features } = require("process");
-
-const content = {
+export const content = {
     header: {
-        
         logo: {
             img: '/images/logo.svg',
             href: '#main'
@@ -143,17 +139,17 @@ const content = {
             text: ' задачи удобно структурировать с помощью чек-листов, меток и пользовательских полей',
             actions: [
                 {
-                    type: action,
+                    type: 'action',
                     text: 'обновляйте статус задачи', 
                     icon: '—>'
                 }, 
                 {
-                    type: action,
+                    type: 'action',
                     text: 'следите за сроками дедлайнов', 
                     icon: '—>'
                 }, 
                 {
-                    type: action,
+                    type: 'action',
                     text: 'отправляйте завершенные задачи в архив', 
                 },
             ],

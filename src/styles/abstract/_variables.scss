@@ -15,9 +15,9 @@ $main-font-family: 'inter';
 $header-font-family: '';
 
 @function to-vw($pixels){
-    @return($pixels / $desktop-width) * 100vw
+    @return calc($pixels / $desktop-width) * 100vw
 };
 
 @function to-vw-mobile($pixels){
-    @return($pixels / $mobile-width) * 100vw
+    @return calc($pixels / $mobile-width) * 100vw
 }
