@@ -46,7 +46,7 @@ export const content = {
             startButton: {
                 type: 'link', 
                 href: '', 
-                icon: ' —>', 
+                icon: '/images/green-arrow', 
                 className: 'blue'
             }
         },
@@ -141,12 +141,12 @@ export const content = {
                 {
                     type: 'action',
                     text: 'обновляйте статус задачи', 
-                    icon: '—>'
+                    icon: '/images/white-arrow'
                 }, 
                 {
                     type: 'action',
                     text: 'следите за сроками дедлайнов', 
-                    icon: '—>'
+                    icon: '/images/white-arrow'
                 }, 
                 {
                     type: 'action',
@@ -243,7 +243,7 @@ export const content = {
         ],
         button: {
             type: 'submit', 
-            icon: ' --> ',
+            icon: '/images/white-arrow',
             text: 'Отправить', 
             color: '#000000'
         }, 
