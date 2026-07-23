@@ -10,18 +10,14 @@ $light-green: #5AD18D;
 $dark-green: #3C711E;
 
 $desktop-width: 1440;
-$mobile-width: 375;
+$mobile-width: 375; 
+$desktop-height: 100;
+$mobile-height: 667; 
 
 $phone: "max-width: 600px";
 $desktop: "min-width: 600px";
+$tablet: "max-width: 1000px";
+
 
 $main-font-family: 'Inter', 'Arial', sans-serif;
 $header-font-family: 'Oswald', 'Arial Narrow', sans-serif;
-
-@function to-vw($pixels){
-    @return calc($pixels / $desktop-width) * 100vw
-};
-
-@function to-vw-mobile($pixels){
-    @return calc($pixels / $mobile-width) * 100vw
-}

@@ -1,4 +1,8 @@
-@use './header';
-@use './main'
+@import './abstract/functions';
+@import './abstract/variables';
+@import './abstract/mixins';
 
+@import './global';
 
+@import './header';
+@import './main'

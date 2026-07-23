@@ -1,29 +1,53 @@
-@use './abstract' as *;
 
 .main{
     display: flex;
+    gap: 24px;
     @include container;
     @include padding-vertical(to-vw(8));
-    @media ($phone){
+
+    @media ($tablet){
         flex-direction: column;
+        .main__info{
+            gap: 1em;
+        }
         .main__info, .main__card{
             width: 100%;
         }
     }
+    &__text{
+        @include flex-column;
+        gap: 1.6em
+    };
+    &__form{
+        @include flex-column;
+        gap:1em
+    };
     &__info{
+        padding: 24px;
         color: $dark-blue;
-        h1{
-            @include set-font(500, 90, 45px, 100px);
-            font-family: $header-font-family;
-            letter-spacing: -2;
-            line-height: clamp(50px, to-vw(80), 100px);
-        };
-        p{
-            @include set-font(400, 22, 16px, 30px);
-            line-height: clamp(20px, to-vw(22), 30px);
-            letter-spacing: -0.2;
+       @include flex-column;
+        gap: 4em;
+        div{
+            
+            h1{
+                @include set-font(500, 90, 45px, 100px);
+                font-family: $header-font-family;
+                letter-spacing: -2;
+                line-height: clamp(50px, to-vw(80), 100px);
+            };
+            p{
+                @include set-font(400, 22, 16px, 30px);
+                line-height: clamp(30px, to-vw(36), 40px);
+                letter-spacing: -0.2;
+            }
         }
+        
         width: 50%;
+    };
+    &__features{
+        display: flex;
+        gap: 0.8em;
+        flex-wrap: wrap;
     };
     &__card{
         width: 50%;

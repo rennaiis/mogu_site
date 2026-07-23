@@ -1,0 +1,16 @@
+
+@function to-vw($pixels){
+    @return calc($pixels / $desktop-width) * 100vw
+};
+
+@function to-vw-mobile($pixels){
+    @return calc($pixels / $mobile-width) * 100vw
+};
+
+@function to-vh($pixels){
+    @return calc($pixels / $desktop-height) * 100vh
+};
+
+@function to-vh-mobile($pixels){
+    @return calc($pixels / $mobile-height) * 100vh
+}; 

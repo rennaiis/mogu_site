@@ -1,11 +1,10 @@
-@use 'variables' as *;
-
 @mixin container(){
     @include padding-horizontal(to-vw(64));
     @media screen and (max-width: 600px) {
         @include padding-vertical(to-vw-mobile(20))
     }
 }
+
 
 @mixin padding-horizontal($value){
     padding-left: $value;
@@ -26,4 +25,24 @@
     display: flex;
     align-items: center;
     
+}
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin option-desk($property, $pixels, $type: vw){
+    #{$property}: to-#{$type}-vw($pixels);
+}
+
+@mixin option-mob($property, $pixels, $type: vw){
+    @media ($phone){
+        #{$property}: to-#{$type}-mobile($pixels)
+    }
+}
+
+@mixin option($property, $pixels, $type: vw){
+    @include option-desk($property, $pixels, $type);
+    @include option-mob($property, $pixels, $type);
 }
