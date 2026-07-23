@@ -2,6 +2,15 @@
 // @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter.ttf') format('truetype');
+}
+
 *, *::after, *::before{
     box-sizing: border-box;
     font-family: $main-font-family;
