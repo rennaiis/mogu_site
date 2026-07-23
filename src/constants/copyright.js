@@ -4,6 +4,10 @@ export const content = {
             img: '/images/logo.svg',
             href: '#main'
         },
+        mobile_menu: {
+            menu: '/images/menu.svg',
+            cross: '/images/cross.svg'
+        },
         navlinks: [
             {
                 name: 'О нас', 
@@ -167,8 +171,12 @@ export const content = {
         {
             background: '#000000',
             images: [{
-                desk: '/images/cards/hands.png',
-                mobile: '/images/cards/hands-mobile.png'
+                desk: '/images/cards/left-hand.png',
+                mobile: '/images/cards/left-hand-mobile.png'
+            }, 
+            {
+                desk: '/images/cards/right-hand.png',
+                mobile: '/images/cards/right-hand-mobile.png'
             }]
         },  
         {
