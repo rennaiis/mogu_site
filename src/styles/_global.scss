@@ -104,15 +104,21 @@ button{
     };
     &--start{
         display: flex;
+        position: relative;
         input{
+            @include option(padding-right, 240, 170);
+            width: 100%;
             border-color: $dark-blue;
             &:focus{
                 border-color: $dark-blue;
             }
         }
         button{
-            height: 100%;
-            margin-left: -2em;
+            @include padding-horizontal(40px);
+            position: absolute;
+            right: 0;
+            top:0;
+            bottom: 0;
         }
     }
 
