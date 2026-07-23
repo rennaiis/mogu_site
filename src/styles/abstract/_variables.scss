@@ -8,15 +8,16 @@ $medium-grey: #B0B1C1;
 $light-grey: #F7F7F7; 
 $light-green: #5AD18D;
 $dark-green: #3C711E;
+$orange: #E36D2F;
 
 $desktop-width: 1440;
 $mobile-width: 375; 
 $desktop-height: 100;
 $mobile-height: 667; 
 
-$phone: "max-width: 600px";
-$desktop: "min-width: 600px";
-$tablet: "max-width: 1000px";
+$desktop: 1024px; 
+$phone: $desktop - 1px;
+
 
 
 $main-font-family: 'Inter', 'Arial', sans-serif;

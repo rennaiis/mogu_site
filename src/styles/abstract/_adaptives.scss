@@ -1,0 +1,12 @@
+@mixin MOBILE() {
+    @media screen and (max-width: $phone) {
+        @content;
+    }
+}
+
+@mixin NOT-MOB() {
+    @media screen and (min-width: $desktop) {
+        @content;
+    }
+}
+

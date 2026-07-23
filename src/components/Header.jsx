@@ -9,8 +9,8 @@ function Header (){
             <div className="header__wrapper">
                 <div className="header__content">
                     <div className="header__logo">
-                        <a href={content.header.logo.href}>
-                            <img src={content.header.logo.img} alt=""/>
+                        <a  href={content.header.logo.href}>
+                            <img className="header__logo-img" src={content.header.logo.img} alt=""/>
                         </a>
                         <div className="header__burger" onClick={()=> setIsOpen(!isOpen)}>
                             <img src={isOpen ? content.header.mobile_menu.cross : content.header.mobile_menu.menu} alt="" />
@@ -19,11 +19,11 @@ function Header (){
                     
                     <nav>
                         {content.header.navlinks.map((link, index)=>(
-                            <a href={link.href}>{link.name}</a>
+                            <a key={index} href={link.href}>{link.name}</a>
                         ))}
                     </nav>
                 </div>
-                <button className="button button--black"> Войти </button>
+                <button className={`button button--${content.header.enter_button.className}`}> Войти </button>
             </div>
         </header>
     )

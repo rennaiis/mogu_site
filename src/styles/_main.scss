@@ -1,57 +1,97 @@
 
 .main{
     display: flex;
+    flex-direction: column;
     gap: 24px;
     @include container;
     @include padding-vertical(to-vw(8));
-
-    @media ($tablet){
-        flex-direction: column;
-        .main__info{
-            gap: 1em;
-        }
-        .main__info, .main__card{
-            width: 100%;
-        }
+    @include NOT-MOB{
+       flex-direction: row;
     }
-    &__text{
+
+    &__info{
+        color: $dark-blue;
         @include flex-column;
-        gap: 1.6em
+        @include NOT-MOB{
+            width: 50%;
+        };
+        @include option(gap, 64, 24);
+        width: 100%;
     };
+    &__textblock{
+        @include flex-column;
+        @include option(gap, 24, 24);
+    };
+    &__header{
+        @include option(font-size, 90, 44);
+        @include option(line-height, 80, 50);
+        font-family: $header-font-family;
+        letter-spacing: -2;
+    }
+    &__description{
+        @include option(font-size, 22, 16);
+        @include option(line-height, 36, 20);
+        letter-spacing: -0.2;
+    }
+    
     &__form{
         @include flex-column;
-        gap:1em
+        @include option(gap, 24, 24);
     };
-    &__info{
-        padding: 24px;
-        color: $dark-blue;
-       @include flex-column;
-        gap: 4em;
-        div{
-            
-            h1{
-                @include set-font(500, 90, 45px, 100px);
-                font-family: $header-font-family;
-                letter-spacing: -2;
-                line-height: clamp(50px, to-vw(80), 100px);
-            };
-            p{
-                @include set-font(400, 22, 16px, 30px);
-                line-height: clamp(30px, to-vw(36), 40px);
-                letter-spacing: -0.2;
-            }
-        }
-        
-        width: 50%;
-    };
+    
     &__features{
         display: flex;
-        gap: 0.8em;
+         @include option(gap, 12, 12);
         flex-wrap: wrap;
     };
     &__card{
-        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include NOT-MOB{
+            width: 50%;
+        };
+        width: 100%;
         background-color: $dark-blue;
-        border-radius: clamp(30px, to-vw(30), 50px)
+        @include option (border-radius, 30, 20);
+        @include option (padding, 17, 11);
+        // background-color:rgba(250, 235, 215, 0)
+        
+    };
+    &__avatars{
+        
+        display: flex;
+        position: relative;        
     }
+    &__avatar{
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        @include option(width, 100, 70);
+        @include option(border-width, 10, 5);
+        border-style: solid;
+        border-color: $dark-blue;
+        &--plus{
+            background-color: $most-light;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            img{
+                aspect-ratio: 1/1;
+                @include option(width, 30, 21)
+            }
+        }
+    }
+    &__avatar-img{
+        @include option(width, 100, 70)
+    }
+    &__pen-img{
+        @include option(width, 583, 303);
+        margin-bottom: -25%;
+    }
+    
+
 }

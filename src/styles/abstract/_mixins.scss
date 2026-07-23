@@ -5,7 +5,6 @@
     }
 }
 
-
 @mixin padding-horizontal($value){
     padding-left: $value;
     padding-right: $value;
@@ -32,17 +31,26 @@
     flex-direction: column;
 }
 
-@mixin option-desk($property, $pixels, $type: vw){
-    #{$property}: to-#{$type}-vw($pixels);
+@mixin setColor($back, $color){
+    background-color: $back;
+    color: $color;
 }
 
-@mixin option-mob($property, $pixels, $type: vw){
-    @media ($phone){
-        #{$property}: to-#{$type}-mobile($pixels)
+@mixin option-desk($property, $pixels){
+    @include NOT-MOB{
+        #{$property}: to-vw($pixels);
     }
+    
 }
 
-@mixin option($property, $pixels, $type: vw){
-    @include option-desk($property, $pixels, $type);
-    @include option-mob($property, $pixels, $type);
+@mixin option-mob($property, $pixels){
+    @include MOBILE{
+        #{$property}: to-vw-mobile($pixels);
+    }
+ 
+}
+
+@mixin option($property, $pixels, $pixelsM){
+    @include option-desk($property, $pixels);
+    @include option-mob($property, $pixelsM);
 }

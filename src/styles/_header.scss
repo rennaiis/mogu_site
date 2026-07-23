@@ -4,7 +4,7 @@
     @include container;
     @include padding-vertical(to-vw(8));
     &--opened {
-        @media ($phone) {
+        @include MOBILE {
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -15,24 +15,24 @@
         }
         .header__content {
             nav {
-                @media ($phone) {
+                 @include MOBILE {
                     display: flex;
                     flex-direction: column;
+                    @include option (gap, 40, 40);
                     gap: 40px;
                 }
             }
         }
         .header__wrapper {
-            @media ($phone) {
+             @include MOBILE {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
             }
             button {
-                @media ($phone) {
+                @include MOBILE{
                     display: block;
                     width: 100%;
-                    height: 64px;
                 }
             }
         }
@@ -42,7 +42,7 @@
             }
         }
         .header__content {
-            @media ($phone) {
+             @include MOBILE {
                 flex: 1;
                 align-items: flex-start;
                 gap: 60px;
@@ -52,7 +52,7 @@
     }
     &__burger{
         width: 40px;
-        @media ($desktop){
+        @include NOT-MOB{
             display: none;
         }
     }
@@ -60,14 +60,17 @@
         display: flex;
         justify-content: space-between;
         align-items:center;
-        @media ($phone){
+        @include MOBILE{
             width: 100%;
         }
+    }
+    &__logo-img{
+        @include option(width, 160, 130)
     }
     &__content{
         @include flex-center;
         gap: to-vw(24);
-        @media ($phone) {
+        @include MOBILE {
             flex-direction: column;
         }
         nav{
@@ -75,18 +78,15 @@
             align-items:center;
             gap: to-vw(34);
             a{
-                @include set-font(500, 16, 16px, 24px);
+                @include option(font-size, 16, 24);
+                font-weight: 500;
                 color: $dark-grey;
             }
-            @media ($phone) {
+            @include MOBILE{
                 display: none;
                 flex-direction: column;
                 align-items: start;
                 align-self: start;
-                a{
-                    font-size: 24px;
-                }
-
             }
         }
     };  
@@ -94,7 +94,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-        @media ($phone) {
+         @include MOBILE{
             button{
                 display: none;
             }

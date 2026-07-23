@@ -1,3 +1,5 @@
+const mobile = 600;
+
 export const content = {
     header: {
         logo: {
@@ -48,47 +50,93 @@ export const content = {
                 placeholder: 'Электронная почта', 
             },
             startButton: {
+                text: 'Hачать',
                 type: 'link', 
                 href: '', 
-                icon: '/images/green-arrow', 
+                icon: '/images/green_arrow.svg', 
                 className: 'blue'
             }
         },
         coworkCard: {
             tag: "Совместная работа", 
             image: {
-                desk: '/images/pen.png',
-                mobile: '/images/pen-mobile.png'
+                sources: [
+                    {
+                        srcSet: '/images/pen-mobile.png',
+                        media: `(max-width: ${mobile}px)`
+                    }
+                    
+                ],
+                imgAttrs: {
+                    src: '/images/pen.png', 
+                    className: 'main__pen-img' 
+                }
             },
             accounts: [
                 {
-                    image: {
-                        desk: '/images/avatars/avatar1.png',
-                        mobile: '/images/avatars/avatar1.png'
+                   image: {
+                        sources: [
+                            {
+                                srcSet: '/images/avatars/avatar1-mobile.png',
+                                media: `(max-width: ${mobile}px)`
+                            }
+                            
+                        ],
+                        imgAttrs: {
+                            src: '/images/avatars/avatar1.png',
+                            className: 'main__avatar-img' 
+                        }
                     },
                     dialog_tag: 'А это вы', 
                 },
                 {
                     image: {
-                        desk: '/images/avatars/avatar2.png',
-                        mobile: '/images/avatars/avatar2.png'
-                    }, 
+                        sources: [
+                            {
+                                srcSet: '/images/avatars/avatar2-mobile.png',
+                                media: `(max-width: ${mobile}px)`
+                            }
+                            
+                        ],
+                        imgAttrs: {
+                            src: '/images/avatars/avatar2.png', 
+                            className: 'main__avatar-img'
+                        }
+                    },
                 },
                 {
                     image: {
-                        desk: '/images/avatars/avatar3.png',
-                        mobile: '/images/avatars/avatar3.png'
-                    }, 
+                        sources: [
+                            {
+                                srcSet: '/images/avatars/avatar3-mobile.png',
+                                media: `(max-width: ${mobile}px)`
+                            }
+                            
+                        ],
+                        imgAttrs: {
+                            src: '/images/avatars/avatar3.png', 
+                            className: 'main__avatar-img'
+                        }
+                    },
                     dialog_tag: 'Это ваш милейший коллега'
                 },
                 {
                     image: {
-                        desk: '/images/avatars/avatar4.png',
-                        mobile: '/images/avatars/avatar4.png'
+                        sources: [
+                            {
+                                srcSet: '/images/avatars/avatar4-mobile.png',
+                                media: `(max-width: ${mobile}px)`
+                            }
+                            
+                        ],
+                        imgAttrs: {
+                            src: '/images/avatars/avatar4.png',
+                            className: 'main__avatar-img' 
+                        }
                     },
                 },
                 {
-                    image: 'plus.svg'
+                    image: '/images/plus.svg'
                 }
             ]
         },
@@ -120,10 +168,19 @@ export const content = {
             textColor: '#3C711E',
             header: 'Вся информация как на ладони', 
             text: 'единая строка поиска для всех проектов - где бы ни была задача, вы быстро ее найдете', 
-            images: [{
-                desk: '/images/cards/iMac.png',
-                mobile: '/images/cards/hands-mobile.png'
-            }]
+            images: [
+                {
+                    sources: [
+                        {
+                            srcSet: '/images/pen-mobile.png',
+                            media: `(max-width: ${mobile}px)`
+                        }
+                        
+                    ],
+                    imgAttrs: {
+                        src: '/images/pen.png', 
+                    }
+                }]
         }, 
         {
             background: '#000000',
@@ -131,10 +188,20 @@ export const content = {
             headerColor: '#FFFFFF',
             header: 'Ничто не мешает полету мысли',
             text: 'фиксируйте новые идеи в один клик, прикрепляйте файлы и подробные описания сути задач',
-            images: [{
-                desk: '/images/cards/arms.png',
-                mobile: '/images/cards/arms-mobile.png'
-            }]
+            images: [
+                {
+                    sources: [
+                        {
+                            srcSet: '/images/arms-mobile.png',
+                            media: `(max-width: ${mobile}px)`
+                        }
+                        
+                    ],
+                    imgAttrs: {
+                        src: '/images/arms.png', 
+                    }
+                }],
+
         }, 
         {
             background: '#4F23AE',
@@ -157,10 +224,19 @@ export const content = {
                     text: 'отправляйте завершенные задачи в архив', 
                 },
             ],
-            images: [{
-                desk: '/images/cards/folder.png',
-                mobile: '/images/cards/folder-mobile.png'
-            }]
+            images: [
+                {
+                    sources: [
+                        {
+                            srcSet: '/images/folder-mobile.png',
+                            media: `(max-width: ${mobile}px)`
+                        }
+                        
+                    ],
+                    imgAttrs: {
+                        src: '/images/folder.png', 
+                    }
+                }],
         }, 
         {
             background: '#F7FF8F',
@@ -171,12 +247,28 @@ export const content = {
         {
             background: '#000000',
             images: [{
-                desk: '/images/cards/left-hand.png',
-                mobile: '/images/cards/left-hand-mobile.png'
-            }, 
+                    sources: [
+                        {
+                            srcSet: '/images/left-hand-mobile.png',
+                            media: `(max-width: ${mobile}px)`
+                        }
+                        
+                    ],
+                    imgAttrs: {
+                        src: '/images/left-hand.png', 
+                    }
+                }, 
             {
-                desk: '/images/cards/right-hand.png',
-                mobile: '/images/cards/right-hand-mobile.png'
+                sources: [
+                        {
+                            srcSet: '/images/right-hand-mobile.png',
+                            media: `(max-width: ${mobile}px)`
+                        }
+                        
+                    ],
+                    imgAttrs: {
+                        src: '/images/right-hand.png', 
+                    }
             }]
         },  
         {
@@ -187,8 +279,16 @@ export const content = {
         },
     ],
     separtorImage:{
-        desk: 'images/separator.png',
-        mobile: 'images/separator-mobile.png',
+        sources: [
+            {
+                srcSet: '/images/avatars/separator-mobile.png',
+                media: `(max-width: ${mobile}px)`
+            }
+            
+        ],
+        imgAttrs: {
+            src: '/images/avatars/separator.png', 
+        }
     },
     casesScreen: [
         {
