@@ -1,3 +1,4 @@
+import Cards from "./components/Cards"
 import Header from "./components/Header"
 import Main from "./components/main"
 import { content } from "./constants/copyright"
@@ -13,6 +14,7 @@ function App() {
           <img src={content.mainScreen.arrow.image} alt="" />
       </a>
     </div>
+    <Cards/>
     </>
   )
 }

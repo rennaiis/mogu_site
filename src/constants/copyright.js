@@ -165,41 +165,38 @@ export const content = {
     ],
     aboutCards: [
         {
-            background: '#FBEAEF',
-            textColor: '#3C711E',
             header: 'Вся информация как на ладони', 
             text: 'единая строка поиска для всех проектов - где бы ни была задача, вы быстро ее найдете', 
             images: [
                 {
                     sources: [
                         {
-                            srcSet: '/images/pen-mobile.png',
+                            srcSet: '/images/cards/iMac-mobile.png',
                             media: `(max-width: ${mobile}px)`
                         }
                         
                     ],
                     imgAttrs: {
-                        src: '/images/pen.png', 
+                        src: '/images/cards/iMac.png', 
+                        className: 'card__image--1'
                     }
                 }]
         }, 
         {
-            background: '#000000',
-            textColor: '#C3C3C3',
-            headerColor: '#FFFFFF',
             header: 'Ничто не мешает полету мысли',
             text: 'фиксируйте новые идеи в один клик, прикрепляйте файлы и подробные описания сути задач',
             images: [
                 {
                     sources: [
                         {
-                            srcSet: '/images/arms-mobile.png',
+                            srcSet: '/images/cards/arms-mobile.png',
                             media: `(max-width: ${mobile}px)`
                         }
                         
                     ],
                     imgAttrs: {
-                        src: '/images/arms.png', 
+                        src: '/images/cards/arms.png', 
+                        className: 'card__image--2'
                     }
                 }],
 
@@ -213,12 +210,12 @@ export const content = {
                 {
                     type: 'action',
                     text: 'обновляйте статус задачи', 
-                    icon: '/images/white-arrow'
+                    icon: '/images/white_arrow.svg'
                 }, 
                 {
                     type: 'action',
                     text: 'следите за сроками дедлайнов', 
-                    icon: '/images/white-arrow'
+                    icon: '/images/white_arrow.svg'
                 }, 
                 {
                     type: 'action',
@@ -229,13 +226,14 @@ export const content = {
                 {
                     sources: [
                         {
-                            srcSet: '/images/folder-mobile.png',
+                            srcSet: '/images/cards/folder-mobile.png',
                             media: `(max-width: ${mobile}px)`
                         }
                         
                     ],
                     imgAttrs: {
-                        src: '/images/folder.png', 
+                        src: '/images/cards/folder.png', 
+                        className: 'card__image--3'
                     }
                 }],
         }, 
@@ -250,31 +248,31 @@ export const content = {
             images: [{
                     sources: [
                         {
-                            srcSet: '/images/left-hand-mobile.png',
+                            srcSet: '/images/cards/hand-left-mobile.png',
                             media: `(max-width: ${mobile}px)`
                         }
                         
                     ],
                     imgAttrs: {
-                        src: '/images/left-hand.png', 
+                        src: '/images/cards/hand-left.png', 
+                        className: 'card__image--arm'
                     }
                 }, 
             {
                 sources: [
                         {
-                            srcSet: '/images/right-hand-mobile.png',
+                            srcSet: '/images/cards/hand-right-mobile.png',
                             media: `(max-width: ${mobile}px)`
                         }
                         
                     ],
                     imgAttrs: {
-                        src: '/images/right-hand.png', 
+                        src: '/images/cards/hand-right.png', 
+                        className: 'card__image--arm'
                     }
             }]
         },  
         {
-            background: '#DDEFD5',
-            textColor: '#DF6741',
             header: 'Настройка под вас',
             text: 'устанавливайте персональный фон для каждого проекта'
         },
