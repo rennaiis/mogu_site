@@ -1,4 +1,5 @@
 $most-dark: #000000;
+$most-light: #FFFFFF;
 $dark-blue: #222FDC;
 $dark-grey: #5B605C;
 $dark-medium-grey: #C3C3C3;
@@ -11,8 +12,11 @@ $dark-green: #3C711E;
 $desktop-width: 1440;
 $mobile-width: 375;
 
-$main-font-family: 'inter';
-$header-font-family: '';
+$phone: "max-width: 600px";
+$desktop: "min-width: 600px";
+
+$main-font-family: 'Inter', 'Arial', sans-serif;
+$header-font-family: 'Oswald', 'Arial Narrow', sans-serif;
 
 @function to-vw($pixels){
     @return calc($pixels / $desktop-width) * 100vw

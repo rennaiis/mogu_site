@@ -21,14 +21,9 @@
     padding-bottom: $value;
 }
 
-@mixin black-button($radius: 30){
-    color: white;
-    background-color: $most-dark;
-    border-radius: clamp(30px, to-vw($radius), 50px);
-    @include padding-horizontal(32px)
-}
 
 @mixin flex-center{
     display: flex;
     align-items: center;
+    
 }

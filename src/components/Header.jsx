@@ -1,18 +1,29 @@
+import { useState } from "react"
 import { content } from "../constants/copyright"
 
 function Header (){
+    const [isOpen, setIsOpen] = useState(false);
+    
     return (
-        <header className="header">
-            <div>
-                <div className="header__logo">
-                    <img src={content.header.logo.img} alt=""/>
+        <header className={`header ${isOpen ? "header--opened" : ""}`}>
+            <div className="header__wrapper">
+                <div className="header__content">
+                    <div className="header__logo">
+                        <a href={content.header.logo.href}>
+                            <img src={content.header.logo.img} alt=""/>
+                        </a>
+                        <div className="header__burger" onClick={()=> setIsOpen(!isOpen)}>
+                            <img src={isOpen ? content.header.mobile_menu.cross : content.header.mobile_menu.menu} alt="" />
+                        </div>
+                    </div>
+                    
                     <nav>
-                        <a href="">О нас</a>
-                        <a href="">Кейсы</a>
-                        <a href="">Обратная связь</a>
+                        {content.header.navlinks.map((link, index)=>(
+                            <a href={link.href}>{link.name}</a>
+                        ))}
                     </nav>
                 </div>
-                <button> Войти </button>
+                <button className="button button--black"> Войти </button>
             </div>
         </header>
     )

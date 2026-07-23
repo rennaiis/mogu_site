@@ -1,8 +1,9 @@
 @forward 'variables';
 @forward 'mixins';
 @use 'variables' as *;
-@use 'variables' as *;
+@use 'mixins' as *;
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 *, *::after, *::before{
@@ -17,6 +18,20 @@ button{
     border: none;
 }
 
+.button{
+   border-radius: clamp(20px, to-vw(30), 30px);
+   color: white;
+   @include padding-horizontal(32px);
+   @include set-font(500, 22, 20px, 24px);
+   &--blue{
+    background-color: $dark-blue;
+    color: $most-light
+   };
+   &--black{
+    background-color: $most-dark;
+    color: $most-light;
+   }
+}
 
 
 
