@@ -280,13 +280,14 @@ export const content = {
     separtorImage:{
         sources: [
             {
-                srcSet: '/images/avatars/separator-mobile.png',
+                srcSet: '/images/separator-mobile.png',
                 media: `(max-width: ${mobile}px)`
             }
             
         ],
         imgAttrs: {
-            src: '/images/avatars/separator.png', 
+            src: '/images/separator.png', 
+            className: "line"
         }
     },
     casesScreen: [

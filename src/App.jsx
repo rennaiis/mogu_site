@@ -1,6 +1,7 @@
 import Cards from "./components/Cards"
 import Header from "./components/Header"
 import Main from "./components/main"
+import Picture from "./components/Picture"
 import { content } from "./constants/copyright"
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       </a>
     </div>
     <Cards/>
+    <Picture {...content.separtorImage}/>
     </>
   )
 }
