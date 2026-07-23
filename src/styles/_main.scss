@@ -45,6 +45,7 @@
         flex-wrap: wrap;
     };
     &__card{
+        align-items:center;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -61,7 +62,12 @@
     &__avatars{
         
         display: flex;
-        position: relative;        
+        position: relative; 
+        @include option(margin-left, 20, 10);
+        @include MOBILE{
+            @include option-mob(margin-top, 75);
+            @include option-mob(margin-bottom, 75);
+        }       
     }
     &__avatar{
         position: relative;
@@ -74,6 +80,7 @@
         @include option(border-width, 10, 5);
         border-style: solid;
         border-color: $dark-blue;
+        @include option(margin-left, -20, -10);
         &--plus{
             background-color: $most-light;
             display: flex;
@@ -91,6 +98,7 @@
     &__pen-img{
         @include option(width, 583, 303);
         margin-bottom: -25%;
+
     }
     
 

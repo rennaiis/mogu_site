@@ -1,11 +1,18 @@
 import Header from "./components/Header"
 import Main from "./components/main"
+import { content } from "./constants/copyright"
 
 function App() {
   return (
     <>
     <Header/>
     <Main/>
+    
+    <div  className="arrow-link" >
+      <a href={content.mainScreen.arrow.href}>
+          <img src={content.mainScreen.arrow.image} alt="" />
+      </a>
+    </div>
     </>
   )
 }

@@ -141,6 +141,7 @@ export const content = {
             ]
         },
         arrow: {
+            image: '/images/arrow-blue.svg',
             href: '#bottom' 
         }
     }, 

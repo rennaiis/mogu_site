@@ -102,3 +102,15 @@
         }
     }
 }
+
+.arrow-link{
+    @include option-desk(height, 40);
+    @include option-desk(margin-top, 64);
+    @include MOBILE{
+        display: none
+    }
+    img{
+       object-fit: cover
+    }
+    @include container;
+}

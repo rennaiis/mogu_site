@@ -58,6 +58,7 @@ button{
     &--card{
         @include setColor($most-light, $dark-blue);
         width: fit-content;
+        align-self: flex-start;
     };
     &--dialog{
         position: absolute;
