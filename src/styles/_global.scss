@@ -95,7 +95,11 @@ button{
     &--case{
         @include setColor($most-light, $cases-text);
         width: fit-content;
-        font-weight: 500
+        font-weight: 500;
+        transition: all 0.3s ease;
+        &:hover{
+            @include setColor($cases-focused, $most-dark);
+        }
     };
     &--disabled{
         @include setColor($cases-disabled, $cases-disabled-text);
