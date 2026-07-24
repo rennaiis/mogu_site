@@ -12,7 +12,7 @@ function App() {
     <>
     <Header/>
     <Main/>
-    <div  className="arrow-link" >
+    <div  className="arrow-link animate-jump" >
       <a href={content.mainScreen.arrow.href}>
           <img src={content.mainScreen.arrow.image} alt="" />
       </a>

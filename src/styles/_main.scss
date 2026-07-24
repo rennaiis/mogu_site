@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    @include option(margin-bottom, 150, 90);
+    @include option(margin-bottom, 0, 90);
     @include container;
     @include padding-vertical(to-vw(8));
     @include NOT-MOB{
@@ -56,9 +56,9 @@
         };
         width: 100%;
         background-color: $dark-blue;
+        @include option(min-height, 644, 357);
         @include option (border-radius, 30, 20);
         @include option (padding, 17, 11);
-        // background-color:rgba(250, 235, 215, 0)
         
     };
     &__avatars{

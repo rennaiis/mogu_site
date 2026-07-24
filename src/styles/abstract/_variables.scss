@@ -1,5 +1,6 @@
 $most-dark: #000000;
 $most-light: #FFFFFF;
+$opacy: #00000000;
 $dark-blue: #222FDC;
 $dark-grey: #5B605C;
 $dark-medium-grey: #C3C3C3;
@@ -37,12 +38,12 @@ $cases-disabled:#C1BEB4;
 
 $desktop-width: 1440;
 $mobile-width: 375; 
-$desktop-height: 100;
+$desktop-height: 1000;
 $mobile-height: 667; 
 
 $desktop: 1024px; 
 $phone: $desktop - 1px;
-
+$tablet: 768px;
 
 
 $main-font-family: 'Inter', 'Arial', sans-serif;

@@ -7,6 +7,43 @@
     }
 }
 
+@keyframes fly-right {
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    60%{
+        opacity: 1;
+        transform: translateX(-10px);
+    }
+    80%{
+        opacity: 1;
+        transform: translateX(5px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes jump {
+    from{
+        transform: translateY(-40px);
+    }
+    to{
+        transform: translateY(0)
+    };
+}
+
 .animate-fade{
     animation: fade-in 1s ease;
 }
+
+.animate-jump{
+    animation: jump 1s infinite ease alternate;
+}
+
+.animate-fly{
+    animation: fly-right 1s ease 0.1s;
+}
+
