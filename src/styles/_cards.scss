@@ -1,5 +1,10 @@
 .cards{
-    @include container;
+    position: relative;
+    z-index: 3;
+    background-color: $most-light;
+    @include option(margin-top, -50, -20);
+    @include option(padding, 64, 20);
+    @include option(border-radius, 30, 20);
     display: grid;
     @include option(gap, 24, 10);
     grid-template-columns: 1fr;

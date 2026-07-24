@@ -392,15 +392,14 @@ export const content = {
         header: 'Обратная связь',
         fields: [
             {
-                type: 'input',
-               
+                type: 'Input',
                 attr: {
                      placeholder: 'Электронная почта',
                      type: 'email'
                 }
             },
             {
-                type: 'textarea',
+                type: 'Textarea',
                 attr: {
                     placeholder: 'О чем хотите расссказать?',
                 }
@@ -408,11 +407,13 @@ export const content = {
             }
         ],
         button: {
-            type: 'submit', 
-            icon: '/images/white-arrow',
+            icon: '/images/white_arrow.svg',
             text: 'Отправить', 
-            color: '#000000'
+            className: 'black-feedback'
         }, 
-        logo: ['/cat.svg', '/eye.svg']
+        logo: {
+            image: '/images/cat.svg',
+            eyes: '/images/eyes.svg'
+        }
     }
 }

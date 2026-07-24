@@ -1,4 +1,6 @@
 .people{
+    position: relative;
+    z-index: 2;
     background-color: $people-back;
     display: flex;
     align-items: last baseline;

@@ -1,0 +1,63 @@
+.feedback{
+    display: flex;
+    flex-direction: column;
+   
+    @include NOT-MOB{
+        flex-direction: row;
+    
+    }
+    position: relative;
+    z-index: 4;
+    background-color: $most-light;
+    @include option(margin-top, -50, -20);
+    @include option(padding, 64, 20);
+    @include option(border-radius, 30, 20);
+    @include option(gap, 30, 20);
+    &__form{
+        display: flex;
+        flex-direction: column;
+        @include NOT-MOB{
+            width: 65%;
+        }
+        @include option(gap, 20, 10);
+        @include option(border-radius, 30, 20);
+        @include option(padding, 64, 20);
+        background-color: $light-grey;
+
+
+    };
+    &__header{
+        @include option(font-size, 72, 32);
+        font-family: $header-font-family;
+        
+    }
+     &__logo{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        @include MOBILE{
+            top: 100%;
+        }
+    }
+
+}
+
+.cat{
+    position: relative;
+    @include option(height, 449, 240);
+    @include option(width, 450, 240);
+    &__body{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include option(width, 450, 240);
+    }
+    &__eyes{
+        @include option(width, 137, 76);
+        top: 26%;
+        left: 27%;
+        position: absolute;
+    }
+   
+    
+}
