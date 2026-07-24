@@ -6,18 +6,21 @@
     &__content{
         display: flex;
         flex-direction: column;
+        @include option(padding, 8, 5);
+        @include option(gap, 24, 24);
         picture{
             width: 100%;
         }
+        
         @include NOT-MOB{
             flex-direction: row;
             picture{
                 width: 65%;
             }
+            
         }
         background-color: $cases-med;
         @include option(border-radius, 30, 20);
-        @include option(padding, 16, 16);
 
     };
     &__tags{
@@ -25,8 +28,29 @@
         flex-wrap: wrap;
         @include option(gap, 12, 12);
     };
+    &__info{
+        @include flex-column;
+        @include option(padding, 15, 24);
+        @include option(gap, 16, 10);
+        @include NOT-MOB{
+            width: 35%;
+        }
+    }
+    &__header{
+        @include option(font-size, 32, 24);
+        @include option(line-height, 48, 48);
+        font-weight: 500;
+    }
+    &__text{
+        @include option(font-size, 22, 16);
+        @include option(line-height, 36, 30);
+        font-weight: 400;
+        letter-spacing: -0.2;
+        color: $cases-text;
+
+    }
     &__screen{
-        
+        width: 100%;
     }
 
 

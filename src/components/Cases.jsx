@@ -7,7 +7,7 @@ function Cases() {
     return (
         <article className="cases">
             <div className="cases__content">
-                <section>
+                <section className="cases__info">
                     <nav className="cases__tags">
                         {content.casesScreen.map((item, index)=>
                         ( <div className={(item.id === current.id) ? 'tag tag--focused' : 
@@ -15,10 +15,10 @@ function Cases() {
                         }>{item.button}</div>)
                     )}
                     </nav>
-                    <h3>
+                    <h3 className="cases__header">
                         {current.header}
                     </h3>
-                    <p>
+                    <p className="cases__text">
                         {current.text}
                     </p>
                 </section>
