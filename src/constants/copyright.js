@@ -148,19 +148,19 @@ export const content = {
     people: [
         {
             letter: 'm', 
-            images: ['/images/people/m']
+            images: ['/images/people/m.svg']
         },
         {
             letter: 'o', 
-            images: ['/images/people/o']
+            images: ['/images/people/o.svg']
         },
         {
             letter: 'g', 
-            images: ['/images/people/g']
+            images: ['/images/people/g.svg']
         },
         {
             letter: 'u', 
-            images: ['/images/people/u']
+            images: ['/images/people/u.svg']
         }
     ],
     aboutCards: [

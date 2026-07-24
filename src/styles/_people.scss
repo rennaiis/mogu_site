@@ -1,0 +1,41 @@
+.people{
+    background-color: $people-back;
+    display: flex;
+    align-items: last baseline;
+    justify-content: center;
+    margin-top: 10px;
+    @include MOBILE{
+        flex-direction: column;
+        align-items:center;
+    }
+    @include option(border-radius, 30, 20);
+    @include option-desk(padding-top, 200);
+    @include option-desk(padding-bottom, 325);
+    &__m{ 
+        img{
+            object-fit: cover;
+            @include option(height, 416,243);
+        }
+    }
+    &__o{ 
+        img{
+            object-fit: cover;
+            @include option(height, 327,195);
+            transform: translateY(-6%)
+        }
+    }
+    &__g{ 
+        img{
+            object-fit: cover;
+            @include option(height, 416,274);
+            transform: translateY(10%)
+        }
+    }
+    &__u{ 
+        img{
+            object-fit: cover;
+            @include option(height, 293,173);
+            transform: translateY(-3%)
+        }
+    }
+}
