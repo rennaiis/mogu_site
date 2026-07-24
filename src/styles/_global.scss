@@ -52,6 +52,13 @@ button{
     &--black{
         background-color: $most-dark;
         color: $most-light;
+    };
+    &--black-feedback{
+        background-color: $most-dark;
+        color: $most-light;
+        @include option(font-size, 28, 18);
+        padding: 1.1em;
+        width: fit-content;
     }
 }
 
@@ -114,7 +121,7 @@ button{
 }
 
 .form{
-    input{
+    input, textarea {
         padding: 1em;
         font-family: $main-font-family;
         @include option(border-radius, 30, 20);
@@ -124,13 +131,10 @@ button{
     &--start{
         display: flex;
         position: relative;
-        input{
+        input {
             @include option(padding-right, 240, 170);
             width: 100%;
             border-color: $dark-blue;
-            &:focus{
-                border-color: $dark-blue;
-            }
         }
         button{
             @include padding-horizontal(40px);
