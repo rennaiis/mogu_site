@@ -14,7 +14,10 @@ function Header (){
                             <img className="header__logo-img" src={content.header.logo.img} alt=""/>
                         </a>
                         <div className="header__burger" onClick={()=> setIsOpen(!isOpen)}>
-                            <img src={isOpen ? content.header.mobile_menu.cross : content.header.mobile_menu.menu} alt="" />
+                            <img 
+                            className={isOpen ? 'header__close-btn' : 'header__open-btn'} 
+                            src={isOpen ? content.header.mobile_menu.cross : content.header.mobile_menu.menu}
+                            alt="" />
                         </div>
                     </div>
                     

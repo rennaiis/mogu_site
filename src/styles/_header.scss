@@ -51,10 +51,15 @@
 
     }
     &__burger{
-        width: 40px;
         @include NOT-MOB{
             display: none;
         }
+    }
+    &__close-btn{
+        @include option-mob(width, 20)
+    }
+    &__open-btn{
+        @include option-mob(width, 40)
     }
     &__logo{
         display: flex;
@@ -110,7 +115,7 @@
         display: none
     }
     img{
-       object-fit: contain;
+       height: 100%
     }
     @include container;
 }

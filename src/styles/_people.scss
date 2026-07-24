@@ -11,8 +11,8 @@
         align-items:center;
     }
     @include option(border-radius, 30, 20);
-    @include option-desk(padding-top, 200);
-    @include option-desk(padding-bottom, 325);
+    @include option(padding-top, 200, 30);
+    @include option(padding-bottom, 325, 30);
     &__m{ 
         img{
             object-fit: cover;
@@ -30,7 +30,9 @@
         img{
             object-fit: cover;
             @include option(height, 416,274);
-            transform: translateY(10%)
+            @include NOT-MOB{
+                transform: translateY(10%)
+            }
         }
     }
     &__u{ 
