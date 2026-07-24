@@ -1,0 +1,134 @@
+.cards{
+    @include container;
+    display: grid;
+    @include option(gap, 24, 10);
+    grid-template-columns: 1fr;
+    @include NOT-MOB{
+        grid-template-columns: repeat(6, 1fr)
+    }
+}
+.card{
+    min-width: 0;
+    @include flex-column;
+    align-items:center;
+    @include option(border-radius, 30, 20);
+    @include MOBILE{
+        height: min-content;
+    }
+
+    &__images{
+        width: 100%;
+        @include flex-center;
+        align-items:center;
+        justify-content: center
+    };
+    &__actions{
+        display: flex;
+        flex-direction: row;
+        img{
+            @include option(width, 30, 30);
+        }
+        @include option(padding, 24,30);
+        @include option(gap, 24, 14);
+        @include MOBILE{
+            flex-direction: column;
+            img{
+                transform: rotate(90deg);
+                @include option-mob(height, 27);
+            }
+            align-items:center;
+            justify-content: ce
+        }
+    };
+    &__text{
+        @include option(padding, 24, 24);
+        @include flex-column;
+        @include option(gap, 20, 20);
+    }
+    &__header{
+        font-family: $header-font-family;
+        @include option(font-size, 78, 36);
+        @include option(line-height, 80, 40);
+        font-weight: 400;
+         text-align: center;
+    };
+    &__image--2{
+        width: 100%;
+    };
+    &__image--1{
+        @include option(width, 350, 114);
+    };
+    &__image--3{
+        @include option(width, 400, 210);
+    };
+    &__image--arm{
+        position: relative;
+        @include option(height, 325, 210);
+        z-index: 10;
+    }
+    p{
+        @include option(font-size, 44, 20);
+        @include option(line-height, 52, 22);
+        font-weight: 400;
+        text-align: center;
+    };
+    &--1{
+        @include setColor($card1-back, $card1-text);
+        @include NOT-MOB{
+            grid-column: span 3;
+        }
+        .card__images{
+            order: -1;
+        };
+        @include option(padding-top, 24, 24);
+        
+    };
+    &--2{
+        .card__header{
+            color: $most-light;
+        }
+        @include NOT-MOB{
+            grid-column: span 3;
+        }
+        picture{
+            width: 100%;
+        }
+        @include setColor($card2-back, $card2-text);        
+    };
+    &--3{
+        @include setColor($card3-back, $card3-text);
+        @include NOT-MOB{
+            grid-column: span 6;
+        }
+    };
+    &--4{
+        @include setColor($card4-back, $card4-text);
+        .card__header, .card__description{
+            text-align: left;
+        };
+        @include NOT-MOB{
+            grid-column: span 2;
+        }
+    };
+    &--5{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        background-color: $most-dark;
+        @include NOT-MOB{
+            grid-column: span 2;
+        }
+        .card__images{
+            display: flex;
+        }
+    };
+    &--6{
+        @include setColor($card6-back, $card6-text);
+        .card__header, .card__description{
+            text-align: left;
+        }
+        @include NOT-MOB{
+            grid-column: span 2;
+        }
+    };
+}

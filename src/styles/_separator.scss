@@ -1,0 +1,7 @@
+.line{
+    @include flex-center;
+    width: 100%; 
+    img{
+        @include option(width, 1000, 300)
+    }
+}

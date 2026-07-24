@@ -165,60 +165,56 @@ export const content = {
     ],
     aboutCards: [
         {
-            background: '#FBEAEF',
-            textColor: '#3C711E',
             header: 'Вся информация как на ладони', 
             text: 'единая строка поиска для всех проектов - где бы ни была задача, вы быстро ее найдете', 
             images: [
                 {
                     sources: [
                         {
-                            srcSet: '/images/pen-mobile.png',
+                            srcSet: '/images/cards/iMac-mobile.png',
                             media: `(max-width: ${mobile}px)`
                         }
                         
                     ],
                     imgAttrs: {
-                        src: '/images/pen.png', 
+                        src: '/images/cards/iMac.png', 
+                        className: 'card__image--1'
                     }
                 }]
         }, 
         {
-            background: '#000000',
-            textColor: '#C3C3C3',
-            headerColor: '#FFFFFF',
             header: 'Ничто не мешает полету мысли',
             text: 'фиксируйте новые идеи в один клик, прикрепляйте файлы и подробные описания сути задач',
             images: [
                 {
                     sources: [
                         {
-                            srcSet: '/images/arms-mobile.png',
+                            srcSet: '/images/cards/arms-mobile.png',
                             media: `(max-width: ${mobile}px)`
                         }
                         
                     ],
                     imgAttrs: {
-                        src: '/images/arms.png', 
+                        src: '/images/cards/arms.png', 
+                        className: 'card__image--2'
                     }
                 }],
 
         }, 
         {
-            background: '#4F23AE',
-            textColor: '#72BDF8',
+            
             header: 'Порядок в подарок',
             text: ' задачи удобно структурировать с помощью чек-листов, меток и пользовательских полей',
             actions: [
                 {
                     type: 'action',
                     text: 'обновляйте статус задачи', 
-                    icon: '/images/white-arrow'
+                    icon: '/images/white_arrow.svg'
                 }, 
                 {
                     type: 'action',
                     text: 'следите за сроками дедлайнов', 
-                    icon: '/images/white-arrow'
+                    icon: '/images/white_arrow.svg'
                 }, 
                 {
                     type: 'action',
@@ -229,52 +225,51 @@ export const content = {
                 {
                     sources: [
                         {
-                            srcSet: '/images/folder-mobile.png',
+                            srcSet: '/images/cards/folder-mobile.png',
                             media: `(max-width: ${mobile}px)`
                         }
                         
                     ],
                     imgAttrs: {
-                        src: '/images/folder.png', 
+                        src: '/images/cards/folder.png', 
+                        className: 'card__image--3'
                     }
                 }],
         }, 
         {
-            background: '#F7FF8F',
-            textColor: '#000000',
+
             header: 'Совместная работа на одной доске ',
             text: 'приглашайте коллег, бизнес-партнеров и заказчиков',
         },
         {
-            background: '#000000',
             images: [{
                     sources: [
                         {
-                            srcSet: '/images/left-hand-mobile.png',
+                            srcSet: '/images/cards/hand-left-mobile.png',
                             media: `(max-width: ${mobile}px)`
                         }
                         
                     ],
                     imgAttrs: {
-                        src: '/images/left-hand.png', 
+                        src: '/images/cards/hand-left.png', 
+                        className: 'card__image--arm'
                     }
                 }, 
             {
                 sources: [
                         {
-                            srcSet: '/images/right-hand-mobile.png',
+                            srcSet: '/images/cards/hand-right-mobile.png',
                             media: `(max-width: ${mobile}px)`
                         }
                         
                     ],
                     imgAttrs: {
-                        src: '/images/right-hand.png', 
+                        src: '/images/cards/hand-right.png', 
+                        className: 'card__image--arm'
                     }
             }]
         },  
         {
-            background: '#DDEFD5',
-            textColor: '#DF6741',
             header: 'Настройка под вас',
             text: 'устанавливайте персональный фон для каждого проекта'
         },
@@ -282,51 +277,113 @@ export const content = {
     separtorImage:{
         sources: [
             {
-                srcSet: '/images/avatars/separator-mobile.png',
+                srcSet: '/images/separator-mobile.png',
                 media: `(max-width: ${mobile}px)`
             }
             
         ],
         imgAttrs: {
-            src: '/images/avatars/separator.png', 
+            src: '/images/separator.png', 
+            className: "line"
         }
     },
     casesScreen: [
         {
+            id: 0,
             button: 'Product marketing', 
             header: 'Создание лендинга', 
             text: 'Заведите доску, пригласите дизайнера, верстальщика и маркетолога, проведите брейншторм и зафиксируйте все идеи на доске, в колонке «Бэклог», приоритизируйте идеи - с помощью меток или отдельных колонок, наиболее приоритетным - назначьте дедлайны и передайте в работу исполнителям',
-            image: '/Camera,',
-            caption: 'Скрин системы',
+            image: {
+                sources: [
+                    {
+                        srcSet: '/images/camera-mobile.png',
+                        media: `(max-width: ${mobile}px)`
+                    }
+                    
+                ],
+                imgAttrs: {
+                    src: '/images/camera.png', 
+                    className: 'cases__screen'
+                }
+            },
         },
         {
+            id: 1,
             button: 'Growth marketing',
             header: 'Создание лендинга 2', 
             text: '22 Заведите доску, пригласите дизайнера, верстальщика и маркетолога, проведите брейншторм и зафиксируйте все идеи на доске, в колонке «Бэклог», приоритизируйте идеи - с помощью меток или отдельных колонок, наиболее приоритетным - назначьте дедлайны и передайте в работу исполнителям',
-            image: '/Camera.svg',
-            caption: 'Скрин системы',
+             image: {
+                sources: [
+                    {
+                        srcSet: '/images/camera-mobile.png',
+                        media: `(max-width: ${mobile}px)`
+                    }
+                    
+                ],
+                imgAttrs: {
+                    src: '/images/camera.png', 
+                    className: 'cases__screen'
+                }
+            },
         },
         {
+            id: 2,
             button: 'Creative',
             header: 'Создание лендинга 2', 
             text: '22 Заведите доску, пригласите дизайнера, верстальщика и маркетолога, проведите брейншторм и зафиксируйте все идеи на доске, в колонке «Бэклог», приоритизируйте идеи - с помощью меток или отдельных колонок, наиболее приоритетным - назначьте дедлайны и передайте в работу исполнителям',
-            image: '/Camera.svg',
-            caption: 'Скрин системы',
+             image: {
+                sources: [
+                    {
+                        srcSet: '/images/camera-mobile.png',
+                        media: `(max-width: ${mobile}px)`
+                    }
+                    
+                ],
+                imgAttrs: {
+                    src: '/images/camera.png', 
+                    className: 'cases__screen'
+                }
+            },
+            
         },
         {
+            id: 3,
             button: 'Marketing',
             header: 'Создание лендинга 2', 
             text: '22 Заведите доску, пригласите дизайнера, верстальщика и маркетолога, проведите брейншторм и зафиксируйте все идеи на доске, в колонке «Бэклог», приоритизируйте идеи - с помощью меток или отдельных колонок, наиболее приоритетным - назначьте дедлайны и передайте в работу исполнителям',
-            image: '/Camera.svg',
-            caption: 'Скрин системы',
+             image: {
+                sources: [
+                    {
+                        srcSet: '/images/camera-mobile.png',
+                        media: `(max-width: ${mobile}px)`
+                    }
+                    
+                ],
+                imgAttrs: {
+                    src: '/images/camera.png', 
+                    className: 'cases__screen'
+                }
+            },
             disabled: true,
         }, 
         {
+            id: 4,
             button: 'PR',
             header: 'Создание лендинга 2', 
             text: '22 Заведите доску, пригласите дизайнера, верстальщика и маркетолога, проведите брейншторм и зафиксируйте все идеи на доске, в колонке «Бэклог», приоритизируйте идеи - с помощью меток или отдельных колонок, наиболее приоритетным - назначьте дедлайны и передайте в работу исполнителям',
-            image: '/Camera.svg',
-            caption: 'Скрин системы',
+            image: {
+                sources: [
+                    {
+                        srcSet: '/images/camera-mobile.png',
+                        media: `(max-width: ${mobile}px)`
+                    }
+                    
+                ],
+                imgAttrs: {
+                    src: '/images/camera.png', 
+                    className: 'cases__screen'
+                }
+            },
             disabled: true,
         }
         

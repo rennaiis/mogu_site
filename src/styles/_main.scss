@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    @include option(margin-bottom, 150, 90);
     @include container;
     @include padding-vertical(to-vw(8));
     @include NOT-MOB{
@@ -25,6 +26,7 @@
     &__header{
         @include option(font-size, 90, 44);
         @include option(line-height, 80, 50);
+        font-weight: 500;
         font-family: $header-font-family;
         letter-spacing: -2;
     }
@@ -97,7 +99,7 @@
     }
     &__pen-img{
         @include option(width, 583, 303);
-        margin-bottom: -25%;
+        @include option(margin-bottom, -150, -90);
 
     }
     

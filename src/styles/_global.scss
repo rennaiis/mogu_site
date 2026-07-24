@@ -2,6 +2,15 @@
 // @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/Oswald.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter.ttf') format('truetype');
+}
+
 *, *::after, *::before{
     box-sizing: border-box;
     font-family: $main-font-family;
@@ -14,7 +23,7 @@ a{
     color: inherit;
     text-decoration: none;
 }
-h1, p{
+h1, h2, p{
     margin: 0;
 }
 button{
@@ -82,6 +91,21 @@ button{
                 left: 50%;
             }
         }
+    };
+    &--case{
+        @include setColor($most-light, $cases-text);
+        width: fit-content;
+        font-weight: 500
+    };
+    &--disabled{
+        @include setColor($cases-disabled, $cases-disabled-text);
+        width: fit-content;
+        font-weight: 500
+    };
+    &--focused{
+        @include setColor($cases-focused, $most-dark);
+        width: fit-content;
+        font-weight: 500
     }
 }
 
@@ -95,15 +119,21 @@ button{
     };
     &--start{
         display: flex;
+        position: relative;
         input{
+            @include option(padding-right, 240, 170);
+            width: 100%;
             border-color: $dark-blue;
             &:focus{
                 border-color: $dark-blue;
             }
         }
         button{
-            height: 100%;
-            margin-left: -2em;
+            @include padding-horizontal(40px);
+            position: absolute;
+            right: 0;
+            top:0;
+            bottom: 0;
         }
     }
 
