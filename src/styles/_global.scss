@@ -31,100 +31,11 @@ button{
     border: none;
 }
 
-.button{
-    @include option(border-radius, 30, 20);
-    color: white;
-    @include padding-horizontal(1.5em);
-    @include option(font-size, 22, 20);
-    @include flex-center;
-    min-height: 2em;
-    gap: 0.5em;
-    img{
-        @include option(width, 48, 19)
-    }
-    &--blue{
-        background-color: $dark-blue;
-        color: $most-light;
-        padding: 1.1em;
-        font-family: $main-font-family;
-        @include option(border-radius, 30, 20);
-        @include option(font-size, 28, 18);
-    };
-    &--black{
-        background-color: $most-dark;
-        color: $most-light;
-    };
-    &--black-feedback{
-        background-color: $most-dark;
-        color: $most-light;
-        @include option(font-size, 28, 18);
-        padding: 1.1em;
-        width: fit-content;
-    }
-}
-
-.tag{
-    @include option (border-radius,12, 9);
-    @include padding-horizontal(1em);
-    @include padding-vertical(1em);
-    @include option(font-size, 16, 14);
-
-    &--features{
-        @include setColor($light-grey, $dark-blue)
-    };
-    &--card{
-        @include setColor($most-light, $dark-blue);
-        width: fit-content;
-        align-self: flex-start;
-    };
-    &--dialog{
-        position: absolute;
-        z-index: 10;
-        &::after{
-            content: '';
-            position: absolute;
-            border: 6px solid transparent;
-        }
-        &--bottom{
-            top: calc(100%);
-            @include setColor($most-light, $dark-blue);
-        }
-        &--top{
-            bottom: calc(100%);
-            @include setColor($most-light, $orange);
-            &::after{
-                content: '';
-                transform: translateX(-50%);
-                bottom: 100%;
-                left: 50%;
-            }
-        }
-    };
-    &--case{
-        @include setColor($most-light, $cases-text);
-        width: fit-content;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        &:hover{
-            @include setColor($cases-focused, $most-dark);
-        }
-    };
-    &--disabled{
-        @include setColor($cases-disabled, $cases-disabled-text);
-        width: fit-content;
-        font-weight: 500
-    };
-    &--focused{
-        @include setColor($cases-focused, $most-dark);
-        width: fit-content;
-        font-weight: 500
-    }
-}
-
 .form{
     input, textarea {
         padding: 1em;
         font-family: $main-font-family;
+        @include option (border-width, 2, 2);
         @include option(border-radius, 30, 20);
         @include option(font-size, 28, 18);
         border-style: solid;

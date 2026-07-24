@@ -1,0 +1,32 @@
+
+.button{
+    @include option(border-radius, 30, 20);
+    color: white;
+    @include padding-horizontal(1.5em);
+    @include option(font-size, 22, 20);
+    @include flex-center;
+    min-height: 2em;
+    gap: 0.5em;
+    img{
+        @include option(width, 48, 19)
+    }
+    &--blue{
+        background-color: $dark-blue;
+        color: $most-light;
+        padding: 1.1em;
+        font-family: $main-font-family;
+        @include option(border-radius, 30, 20);
+        @include option(font-size, 28, 18);
+    };
+    &--black{
+        background-color: $most-dark;
+        color: $most-light;
+    };
+    &--black-feedback{
+        background-color: $most-dark;
+        color: $most-light;
+        @include option(font-size, 28, 18);
+        padding: 1.1em;
+        width: fit-content;
+    }
+}
