@@ -1,4 +1,5 @@
 import { content } from "../constants/copyright"
+import Button from "./Button"
 import Picture from "./Picture"
 
 function Main (){   
@@ -22,10 +23,7 @@ function Main (){
                             type={content.mainScreen.emailForm.input.type} 
                             placeholder={content.mainScreen.emailForm.input.placeholder}
                         />
-                        <button className={`button button--${content.mainScreen.emailForm.startButton.className}`}>
-                            {content.mainScreen.emailForm.startButton.text}
-                            <img src={content.mainScreen.emailForm.startButton.icon} alt="" />
-                        </button>
+                        <Button {...content.mainScreen.emailForm.startButton}/>
                     </form>
                 </div>
                 

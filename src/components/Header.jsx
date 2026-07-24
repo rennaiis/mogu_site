@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { content } from "../constants/copyright"
+import Button from "./Button";
 
 function Header (){
     const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ function Header (){
                         ))}
                     </nav>
                 </div>
-                <button className={`button button--${content.header.enter_button.className}`}> Войти </button>
+                <Button {...content.header.enter_button}/>
             </div>
         </header>
     )

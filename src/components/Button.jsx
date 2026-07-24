@@ -1,7 +1,10 @@
-function Button ({type, text, className, href, icon}) {
+function Button ({text, className, icon}) {
     return (
-        <button>
-
+        <button className={`button button--${className}`}>
+            {text}
+            {icon ? <img src={icon} alt="" /> : <></>}
         </button>
     )
 }
+
+export default Button
