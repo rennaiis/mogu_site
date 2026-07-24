@@ -13,7 +13,7 @@
     &--blue{
         background-color: $dark-blue;
         color: $most-light;
-        padding: 1.1em;
+        padding: 1em;
         font-family: $main-font-family;
         @include option(border-radius, 30, 20);
         @include option(font-size, 28, 18);
@@ -21,6 +21,8 @@
     &--black{
         background-color: $most-dark;
         color: $most-light;
+        @include option (height, 64, 64);
+        @include option-mob (border-radius, 30)
     };
     &--black-feedback{
         background-color: $most-dark;

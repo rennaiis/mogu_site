@@ -21,7 +21,7 @@ function Header (){
                         </div>
                     </div>
                     
-                    <nav>
+                    <nav className="header__navlinks">
                         {content.header.navlinks.map((link, index)=>(
                             <a 
                             key={index} 

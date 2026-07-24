@@ -1,7 +1,6 @@
 .feedback{
     display: flex;
     flex-direction: column;
-   
     @include NOT-MOB{
         flex-direction: row;
     
@@ -10,7 +9,7 @@
     z-index: 4;
     background-color: $most-light;
     @include option(margin-top, -50, -20);
-    @include option(padding, 64, 20);
+    @include container;
     @include option(border-radius, 30, 20);
     @include option(gap, 30, 20);
     &__form{

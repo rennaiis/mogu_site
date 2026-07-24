@@ -1,8 +1,7 @@
-@mixin container(){
-    @include padding-horizontal(to-vw(64));
-    @media screen and (max-width: 600px) {
-        @include padding-vertical(to-vw-mobile(20))
-    }
+@mixin container{
+    @include option (padding-left, 64, 20);
+    @include option (padding-right, 64, 20)
+
 }
 
 @mixin padding-horizontal($value){
