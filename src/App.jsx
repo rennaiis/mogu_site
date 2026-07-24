@@ -1,4 +1,5 @@
 import Cards from "./components/Cards"
+import Cases from "./components/Cases"
 import Header from "./components/Header"
 import Main from "./components/main"
 import Picture from "./components/Picture"
@@ -17,6 +18,7 @@ function App() {
     </div>
     <Cards/>
     <Picture {...content.separtorImage}/>
+    <Cases/>
     </>
   )
 }

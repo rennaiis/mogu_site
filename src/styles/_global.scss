@@ -91,6 +91,21 @@ button{
                 left: 50%;
             }
         }
+    };
+    &--case{
+        @include setColor($most-light, $cases-text);
+        width: fit-content;
+        font-weight: 500
+    };
+    &--disabled{
+        @include setColor($cases-disabled, $cases-disabled-text);
+        width: fit-content;
+        font-weight: 500
+    };
+    &--focused{
+        @include setColor($cases-focused, $most-dark);
+        width: fit-content;
+        font-weight: 500
     }
 }
 

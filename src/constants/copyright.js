@@ -202,8 +202,7 @@ export const content = {
 
         }, 
         {
-            background: '#4F23AE',
-            textColor: '#72BDF8',
+            
             header: 'Порядок в подарок',
             text: ' задачи удобно структурировать с помощью чек-листов, меток и пользовательских полей',
             actions: [
@@ -238,13 +237,11 @@ export const content = {
                 }],
         }, 
         {
-            background: '#F7FF8F',
-            textColor: '#000000',
+
             header: 'Совместная работа на одной доске ',
             text: 'приглашайте коллег, бизнес-партнеров и заказчиков',
         },
         {
-            background: '#000000',
             images: [{
                     sources: [
                         {
@@ -292,40 +289,101 @@ export const content = {
     },
     casesScreen: [
         {
+            id: 0,
             button: 'Product marketing', 
             header: 'Создание лендинга', 
             text: 'Заведите доску, пригласите дизайнера, верстальщика и маркетолога, проведите брейншторм и зафиксируйте все идеи на доске, в колонке «Бэклог», приоритизируйте идеи - с помощью меток или отдельных колонок, наиболее приоритетным - назначьте дедлайны и передайте в работу исполнителям',
-            image: '/Camera,',
-            caption: 'Скрин системы',
+            image: {
+                sources: [
+                    {
+                        srcSet: '/images/camera-mobile.png',
+                        media: `(max-width: ${mobile}px)`
+                    }
+                    
+                ],
+                imgAttrs: {
+                    src: '/images/camera.png', 
+                    className: 'cases__screen'
+                }
+            },
         },
         {
+            id: 1,
             button: 'Growth marketing',
             header: 'Создание лендинга 2', 
             text: '22 Заведите доску, пригласите дизайнера, верстальщика и маркетолога, проведите брейншторм и зафиксируйте все идеи на доске, в колонке «Бэклог», приоритизируйте идеи - с помощью меток или отдельных колонок, наиболее приоритетным - назначьте дедлайны и передайте в работу исполнителям',
-            image: '/Camera.svg',
-            caption: 'Скрин системы',
+             image: {
+                sources: [
+                    {
+                        srcSet: '/images/camera-mobile.png',
+                        media: `(max-width: ${mobile}px)`
+                    }
+                    
+                ],
+                imgAttrs: {
+                    src: '/images/camera.png', 
+                    className: 'cases__screen'
+                }
+            },
         },
         {
+            id: 2,
             button: 'Creative',
             header: 'Создание лендинга 2', 
             text: '22 Заведите доску, пригласите дизайнера, верстальщика и маркетолога, проведите брейншторм и зафиксируйте все идеи на доске, в колонке «Бэклог», приоритизируйте идеи - с помощью меток или отдельных колонок, наиболее приоритетным - назначьте дедлайны и передайте в работу исполнителям',
-            image: '/Camera.svg',
-            caption: 'Скрин системы',
+             image: {
+                sources: [
+                    {
+                        srcSet: '/images/camera-mobile.png',
+                        media: `(max-width: ${mobile}px)`
+                    }
+                    
+                ],
+                imgAttrs: {
+                    src: '/images/camera.png', 
+                    className: 'cases__screen'
+                }
+            },
+            
         },
         {
+            id: 3,
             button: 'Marketing',
             header: 'Создание лендинга 2', 
             text: '22 Заведите доску, пригласите дизайнера, верстальщика и маркетолога, проведите брейншторм и зафиксируйте все идеи на доске, в колонке «Бэклог», приоритизируйте идеи - с помощью меток или отдельных колонок, наиболее приоритетным - назначьте дедлайны и передайте в работу исполнителям',
-            image: '/Camera.svg',
-            caption: 'Скрин системы',
+             image: {
+                sources: [
+                    {
+                        srcSet: '/images/camera-mobile.png',
+                        media: `(max-width: ${mobile}px)`
+                    }
+                    
+                ],
+                imgAttrs: {
+                    src: '/images/camera.png', 
+                    className: 'cases__screen'
+                }
+            },
             disabled: true,
         }, 
         {
+            id: 4,
             button: 'PR',
             header: 'Создание лендинга 2', 
             text: '22 Заведите доску, пригласите дизайнера, верстальщика и маркетолога, проведите брейншторм и зафиксируйте все идеи на доске, в колонке «Бэклог», приоритизируйте идеи - с помощью меток или отдельных колонок, наиболее приоритетным - назначьте дедлайны и передайте в работу исполнителям',
-            image: '/Camera.svg',
-            caption: 'Скрин системы',
+            image: {
+                sources: [
+                    {
+                        srcSet: '/images/camera-mobile.png',
+                        media: `(max-width: ${mobile}px)`
+                    }
+                    
+                ],
+                imgAttrs: {
+                    src: '/images/camera.png', 
+                    className: 'cases__screen'
+                }
+            },
             disabled: true,
         }
         
