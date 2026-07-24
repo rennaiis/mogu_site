@@ -3,7 +3,7 @@ import Button from "./Button"
 
 function Feedback() {
     return (
-        <article className="feedback">
+        <article className="feedback" id="feedback">
             <form className="form feedback__form">
                 <h2 className="feedback__header">{content.feedbackForm.header}</h2>
                 {content.feedbackForm.fields.map((item, map)=>(

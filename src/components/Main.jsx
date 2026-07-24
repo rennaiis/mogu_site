@@ -4,7 +4,7 @@ import Picture from "./Picture"
 
 function Main (){   
     return (
-        <div className="main">
+        <div className="main" id="main">
             <section className="main__info">
                 <div className="main__textblock">
                     <h1 className="main__header">{content.mainScreen.mainHeader}</h1>

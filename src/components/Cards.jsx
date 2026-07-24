@@ -3,7 +3,7 @@ import Picture from "./Picture";
 
 function Cards () {
     return (
-        <article className="cards">
+        <article className="cards" id='about'>
             {content.aboutCards.map((card, index)=>(
                 <div className={`card card--${index + 1}`} key='index'>
                     {(card.header && card.text) &&

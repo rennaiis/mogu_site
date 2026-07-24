@@ -10,7 +10,7 @@ function Cases() {
         }
     }
     return (
-        <article className="cases">
+        <article className="cases" id="cases">
             <div className="cases__content">
                 <section className="cases__info">
                     <nav className="cases__tags">

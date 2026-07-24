@@ -23,7 +23,10 @@ function Header (){
                     
                     <nav>
                         {content.header.navlinks.map((link, index)=>(
-                            <a key={index} href={link.href}>{link.name}</a>
+                            <a 
+                            key={index} 
+                            href={link.href}
+                            onClick={()=>setIsOpen(false)}>{link.name}</a>
                         ))}
                     </nav>
                 </div>
