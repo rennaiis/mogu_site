@@ -94,6 +94,7 @@
             font-weight: 500;
             color: $dark-grey;
             padding: 1em;
+            letter-spacing: 0.1px;
         }
     }
     &__content{
@@ -131,12 +132,8 @@
 
 .arrow-link{
     @include option-desk(height, 40);
-    @include option-desk(margin-top, 64);
     @include MOBILE{
         display: none
-    }
-    img{
-       height: 100%
     }
     @include container;
 }

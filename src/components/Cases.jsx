@@ -16,6 +16,7 @@ function Cases() {
                     <nav className="cases__tags">
                         {content.casesScreen.map((item, index)=>
                         ( <div
+                            key={index}
                             onClick={()=>clickButton(item)} 
                             className={(item.id === current.id) ? 'tag tag--focused' : 
                             (item.disabled ? 'tag tag--disabled' : 'tag tag--case')

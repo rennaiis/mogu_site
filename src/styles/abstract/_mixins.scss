@@ -1,7 +1,8 @@
 @mixin container{
     @include option (padding-left, 64, 20);
-    @include option (padding-right, 64, 20)
-
+    @include option (padding-right, 54, 20);
+    @include option (padding-bottom, 64, 20);
+    @include option (padding-top, 64, 20);
 }
 
 @mixin padding-horizontal($value){
@@ -11,7 +12,6 @@
 @mixin set-font($weight, $size, $min, $max){
     font-size: clamp($min, to-vw($size), $max);
     font-weight: $weight;
-
 }
 @mixin padding-vertical($value){
     padding-top: $value;

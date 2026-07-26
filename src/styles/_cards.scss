@@ -106,6 +106,9 @@
         @include NOT-MOB{
             grid-column: span 6;
         }
+        p{
+            @include option-desk(max-width, 856)
+        }
     };
     &--4{
         @include setColor($card4-back, $card4-text);

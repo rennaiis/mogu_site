@@ -44,12 +44,11 @@ button{
         display: flex;
         position: relative;
         input {
-            @include option(padding-right, 240, 170);
+            @include option(padding-right, 240, 140);
             width: 100%;
             border-color: $dark-blue;
         }
         button{
-            @include padding-horizontal(40px);
             position: absolute;
             right: 0;
             top:0;

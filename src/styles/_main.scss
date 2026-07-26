@@ -1,11 +1,10 @@
-
 .main{
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    @include option(gap, 28, 10);
     @include option(margin-bottom, 0, 90);
+    @include option(padding-top, 48, 40);
     @include container;
-    @include padding-vertical(to-vw(8));
     @include NOT-MOB{
        flex-direction: row;
     }
@@ -16,6 +15,7 @@
         @include NOT-MOB{
             width: 50%;
         };
+        @include option-desk(padding, 23);
         @include option(gap, 64, 24);
         width: 100%;
     };
@@ -26,14 +26,15 @@
     &__header{
         @include option(font-size, 90, 44);
         @include option(line-height, 80, 50);
+        @include option(letter-spacing, -2, -2);
         font-weight: 500;
         font-family: $header-font-family;
-        letter-spacing: -2;
     }
     &__description{
         @include option(font-size, 22, 16);
         @include option(line-height, 36, 20);
-        letter-spacing: -0.2;
+        @include option(letter-spacing, -0.2, -0.2);
+        font-weight: 400;
     }
     
     &__form{
@@ -50,7 +51,6 @@
         align-items:center;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         @include NOT-MOB{
             width: 50%;
         };
@@ -58,18 +58,16 @@
         background-color: $dark-blue;
         @include option(min-height, 644, 357);
         @include option (border-radius, 30, 20);
-        @include option (padding, 17, 11);
+        @include option (padding, 20, 10);
         
     };
     &__avatars{
-        
+        @include option(margin-left, 20, 10);
+        @include option(margin-top, 180, 110);
+        @include option(margin-bottom, 140, 75);
         display: flex;
         position: relative; 
-        @include option(margin-left, 20, 10);
-        @include MOBILE{
-            @include option-mob(margin-top, 75);
-            @include option-mob(margin-bottom, 75);
-        }       
+        @include option(margin-left, 20, 10);   
     }
     &__avatar{
         position: relative;

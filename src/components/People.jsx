@@ -4,9 +4,13 @@ function People(){
     return (
         <article className="people" id="people">
             {content.people.map((item, id)=>(
-            <div className={`people__${item.letter}`}>
+            <div
+                
+                className={`people__${item.letter}`}>
                 {item.images.map((image, index)=>(
-                    <img src={image} alt="" className={`people__${item.letter}-${index}`}/>
+                    <img src={image} alt="" 
+                    key={index} 
+                    className={`people__${item.letter}-${index}`}/>
                 ))}
             </div>
         ))}

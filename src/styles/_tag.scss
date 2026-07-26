@@ -1,8 +1,8 @@
 .tag{
-    @include option (border-radius,12, 9);
     @include padding-horizontal(1em);
-    @include padding-vertical(1em);
+    @include padding-vertical(0.9em);
     @include option(font-size, 16, 14);
+    @include option (border-radius,11, 9);
 
     &--features{
         @include setColor($light-grey, $dark-blue)
@@ -11,14 +11,19 @@
         @include setColor($most-light, $dark-blue);
         width: fit-content;
         align-self: flex-start;
+        font-weight: 500;
+        @include option(line-height, 48, 29);
+        @include padding-vertical(0);
     };
     &--dialog{
+        @include option (border-radius,20, 9);
         position: absolute;
         z-index: 10;
+        @include option(font-size, 22, 16);
+        font-weight: 500;
         &::after{
             content: '';
-            position: absolute;
-            
+            position: absolute;   
         }
         
         &--bottom{
@@ -36,8 +41,8 @@
             }
         }
         &--top{
-            bottom: calc(100%);
-            right: calc(21%);
+            bottom: calc(140%);
+            right: calc(10%);
             white-space: nowrap;
             @include setColor($most-light, $orange);
             &::after{
