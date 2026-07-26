@@ -3,8 +3,10 @@ import Button from "./Button"
 import Picture from "./Picture"
 
 function Main (){   
+    
     return (
         <div className="main" id="main">
+            
             <section className="main__info">
                 <div className="main__textblock">
                     <h1 className="main__header">{content.mainScreen.mainHeader}</h1>
@@ -13,10 +15,11 @@ function Main (){
                 <div className="main__form">
                     <div className="main__features">
                     {content.mainScreen.features.map((item, index)=>(
-                        <span key={index}className="tag tag--features">
+                        <span key={index} className="tag tag--features">
                             {item.text}
                         </span>
                     ))}
+                    
                     </div>
                     <form className="form form--start">
                         <input 
@@ -34,20 +37,26 @@ function Main (){
                 </div>
                 <div className="main__avatars">
                     {content.mainScreen.coworkCard.accounts.map((item, index)=>(
-                        <div>
+                        <div key={index} >
                             {index ==4 ? 
                             <>
-                                <div className="main__avatar main__avatar--plus">
+                                <div 
+                                style={{animationDelay: `${index*0.3}s`}}
+                                className="main__avatar main__avatar--plus animate-fly">
                                     <img  src={item.image} alt="" />
                                 </div>
                             </> : 
                             <>
                                 {item.dialog_tag && (
-                                <div className={`tag tag--dialog ${index == 0 ? 'tag--dialog--bottom' : 'tag--dialog--top'}`}>
+                                <div 
+                                    style={{animationDelay: `${index*0.3 + 0.5}s`}}
+                                    className={`tag tag--dialog ${index == 0 ? 'tag--dialog--bottom' : 'tag--dialog--top'} animate-fly`}>
                                     {item.dialog_tag}
                                 </div>
                                 )}
-                                <div className="main__avatar">
+                                <div
+                                    style={{animationDelay: `${index*0.3}s`}}
+                                    className="main__avatar animate-fly">
                                     <Picture {...item.image}/>
                                 </div>
                             </>
